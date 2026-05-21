@@ -2,392 +2,635 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Happy Birthday Sharvari 💖</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Happy Birthday Sharvari 💖 | Forever & Always</title>
     <style>
-
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family: Arial, sans-serif;
-            scroll-behavior:smooth;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Poppins', system-ui, -apple-system, 'Arial', sans-serif;
+            scroll-behavior: smooth;
         }
 
-        body{
-            background: linear-gradient(135deg,#ff9a9e,#fad0c4,#c471ed);
-            overflow-x:hidden;
-            color:white;
+        body {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #c471ed);
+            background-attachment: fixed;
+            overflow-x: hidden;
+            color: #fff9f9;
         }
 
-        section{
-            min-height:100vh;
-            display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:50px 20px;
-            position:relative;
+        /* custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(255,245,245,0.3);
+            border-radius: 20px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ff66b2;
+            border-radius: 20px;
         }
 
-        h1{
-            font-size:60px;
-            margin-bottom:25px;
-            animation:bounce 2s infinite;
-            text-shadow:2px 2px 10px rgba(0,0,0,0.3);
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 24px;
+            position: relative;
+            backdrop-filter: blur(2px);
         }
 
-        p{
-            font-size:24px;
-            line-height:1.8;
-            max-width:900px;
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            margin-bottom: 20px;
+            animation: bounce 2.2s infinite ease-in-out;
+            text-shadow: 3px 3px 15px rgba(0,0,0,0.3);
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #fff5e6, #ffe0f0);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: none;
+            font-weight: 800;
         }
 
-        .btn{
-            margin-top:40px;
-            padding:16px 35px;
-            border:none;
-            border-radius:50px;
-            background:white;
-            color:#ff1493;
-            font-size:22px;
-            cursor:pointer;
-            font-weight:bold;
-            transition:0.3s;
-            box-shadow:0 5px 15px rgba(0,0,0,0.3);
+        p {
+            font-size: clamp(1.1rem, 4vw, 1.5rem);
+            line-height: 1.7;
+            max-width: 850px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            font-weight: 500;
+            background: rgba(0,0,0,0.1);
+            backdrop-filter: blur(4px);
+            padding: 20px;
+            border-radius: 48px;
+            margin: 10px auto;
         }
 
-        .btn:hover{
-            transform:scale(1.1);
+        .btn {
+            margin-top: 45px;
+            padding: 14px 38px;
+            border: none;
+            border-radius: 60px;
+            background: #fff0f5;
+            color: #d43f7a;
+            font-size: 1.3rem;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.25s ease;
+            box-shadow: 0 12px 22px rgba(0,0,0,0.2);
+            backdrop-filter: blur(4px);
+            letter-spacing: 1px;
         }
 
-        /* PHOTO SECTION */
-
-        .memory-title{
-            font-size:55px;
-            margin-bottom:20px;
+        .btn:hover {
+            transform: scale(1.05);
+            background: white;
+            color: #ff1493;
+            box-shadow: 0 18px 28px rgba(0,0,0,0.25);
         }
 
-        .photo-gallery{
-            display:flex;
-            flex-wrap:wrap;
-            justify-content:center;
-            gap:35px;
-            margin-top:50px;
+        /* memory title */
+        .memory-title {
+            font-size: clamp(2rem, 7vw, 3.8rem);
+            margin-bottom: 15px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FFE5B4, #FFB6C1);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
         }
 
-        .photo-card{
-            width:280px;
-            background:rgba(255,255,255,0.15);
-            backdrop-filter:blur(10px);
-            border-radius:30px;
-            padding:15px;
-            box-shadow:0 10px 25px rgba(0,0,0,0.3);
-            transition:0.5s;
-            transform:rotate(-2deg);
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin: 50px 0 20px;
         }
 
-        .photo-card:nth-child(2){
-            transform:rotate(2deg);
+        .photo-card {
+            width: 280px;
+            background: rgba(255,240,245,0.2);
+            backdrop-filter: blur(12px);
+            border-radius: 44px;
+            padding: 18px 16px 20px;
+            box-shadow: 0 25px 35px rgba(0, 0, 0, 0.25);
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            transform: rotate(-1deg);
+            border: 1px solid rgba(255,255,240,0.5);
         }
 
-        .photo-card:nth-child(3){
-            transform:rotate(-3deg);
+        .photo-card:nth-child(2) {
+            transform: rotate(2deg);
+        }
+        .photo-card:nth-child(3) {
+            transform: rotate(-2.5deg);
         }
 
-        .photo-card:hover{
-            transform:scale(1.05) rotate(0deg);
+        .photo-card:hover {
+            transform: scale(1.04) rotate(0deg);
+            background: rgba(255,250,240,0.3);
+            box-shadow: 0 30px 40px rgba(0,0,0,0.35);
         }
 
-        .photo-card img{
-            width:100%;
-            height:320px;
-            object-fit:cover;
-            border-radius:20px;
-            border:4px solid white;
+        .photo-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 32px;
+            border: 3px solid white;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.2);
         }
 
-        .photo-text{
-            margin-top:15px;
-            font-size:20px;
-            color:white;
-            font-weight:bold;
+        .photo-text {
+            margin-top: 16px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #fff0e7;
+            text-shadow: 0 1px 2px #b34e7a;
         }
 
-        /* PROPOSAL BUTTONS */
-
-        .buttons{
-            position:relative;
-            width:100%;
-            height:250px;
-            margin-top:40px;
+        .cute-line {
+            margin-top: 25px;
+            font-size: 1.25rem;
+            background: rgba(255,215,225,0.5);
+            backdrop-filter: blur(5px);
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-block;
         }
 
-        .yes-btn,
-        .no-btn{
-            position:absolute;
-            padding:16px 40px;
-            border:none;
-            border-radius:50px;
-            font-size:24px;
-            cursor:pointer;
-            font-weight:bold;
-            transition:0.3s;
+        /* proposal section */
+        .proposal-buttons {
+            position: relative;
+            width: 100%;
+            min-height: 260px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            margin-top: 35px;
+            flex-wrap: wrap;
         }
 
-        .yes-btn{
-            background:white;
-            color:#ff1493;
-            left:35%;
-            top:70px;
+        .yes-btn, .no-btn {
+            padding: 14px 45px;
+            border: none;
+            border-radius: 70px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 12px 18px rgba(0,0,0,0.25);
+            letter-spacing: 2px;
         }
 
-        .yes-btn:hover{
-            transform:scale(1.1);
+        .yes-btn {
+            background: white;
+            color: #d43f7a;
+            border: 2px solid #ffb7c5;
         }
 
-        .no-btn{
-            background:#ff1493;
-            color:white;
-            left:55%;
-            top:70px;
+        .yes-btn:hover {
+            transform: scale(1.07);
+            background: #ffeef4;
+            color: #b82b62;
         }
 
-        /* FLOATING HEARTS */
-
-        .hearts span{
-            position:fixed;
-            font-size:35px;
-            animation:float 10s linear infinite;
-            bottom:-100px;
-            z-index:-1;
+        .no-btn {
+            background: #ff5c8a;
+            color: white;
+            border: 2px solid #fff0f5;
+            position: relative;
+            transition: left 0.15s ease, top 0.15s ease;
         }
 
-        @keyframes float{
+        /* floating hearts animation */
+        .hearts span {
+            position: fixed;
+            font-size: 2rem;
+            animation: floatHearts 11s infinite linear;
+            bottom: -80px;
+            z-index: 99;
+            opacity: 0.7;
+            pointer-events: none;
+        }
 
-            0%{
-                transform:translateY(0) rotate(0deg);
-                opacity:1;
+        @keyframes floatHearts {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.9;
             }
-
-            100%{
-                transform:translateY(-120vh) rotate(360deg);
-                opacity:0;
+            100% {
+                transform: translateY(-120vh) rotate(380deg);
+                opacity: 0;
             }
         }
 
-        @keyframes bounce{
-
-            0%,100%{
-                transform:translateY(0);
-            }
-
-            50%{
-                transform:translateY(-10px);
-            }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0);}
+            50% { transform: translateY(-12px);}
         }
 
-        .cute-line{
-            margin-top:15px;
-            color:#fff5f5;
-            font-size:20px;
+        /* surprise message & confetti simulation */
+        .surprise-toast {
+            position: fixed;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ffecb3;
+            color: #c2185b;
+            padding: 14px 28px;
+            border-radius: 60px;
+            font-weight: bold;
+            font-size: 1.4rem;
+            z-index: 1000;
+            box-shadow: 0 8px 28px rgba(0,0,0,0.3);
+            backdrop-filter: blur(12px);
+            border-left: 6px solid #ff4d6d;
+            animation: fadeSlide 0.5s ease;
         }
 
+        @keyframes fadeSlide {
+            from { opacity: 0; transform: translateX(-50%) translateY(40px);}
+            to { opacity: 1; transform: translateX(-50%) translateY(0);}
+        }
+
+        /* responsive for mobile */
+        @media (max-width: 700px) {
+            .photo-card {
+                width: 240px;
+            }
+            .photo-card img {
+                height: 260px;
+            }
+            .yes-btn, .no-btn {
+                padding: 12px 32px;
+                font-size: 1.4rem;
+            }
+            .proposal-buttons {
+                gap: 25px;
+            }
+        }
+        @media (max-width: 550px) {
+            .proposal-buttons {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .no-btn {
+                margin-top: 10px;
+            }
+        }
+        .final-love-note {
+            margin-top: 40px;
+            font-size: 1.3rem;
+            background: #f7cedf70;
+            backdrop-filter: blur(10px);
+            padding: 12px 30px;
+            border-radius: 80px;
+        }
+        .heart-icon {
+            display: inline-block;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1);}
+            100% { transform: scale(1.2);}
+        }
     </style>
-
 </head>
-
 <body>
 
-    <!-- FLOATING HEARTS -->
+<!-- Floating hearts generator (dynamic) -->
+<div class="hearts" id="heartContainer"></div>
 
-    <div class="hearts">
-
-        <span style="left:10%; animation-duration:8s;">💖</span>
-        <span style="left:25%; animation-duration:10s;">💕</span>
-        <span style="left:45%; animation-duration:7s;">💗</span>
-        <span style="left:60%; animation-duration:12s;">💝</span>
-        <span style="left:80%; animation-duration:9s;">💞</span>
-
-    </div>
-
-    <!-- SECTION 1 -->
-
-    <section>
-
-        <h1>🎂 Happy Birthday Sharvari 💖</h1>
-
-         <p style="font-size:20px;">
-
-        Dear <span style="color:#ff4f81; font-weight:bold;">Sharvari ✨</span><br><br>
-
+<!-- SECTION 1 : WELCOME + BIRTHDAY MESSAGE -->
+<section id="welcome">
+    <h1>🎂 Happy Birthday Sharvari 💖</h1>
+    <p style="font-size: clamp(1rem, 4vw, 1.3rem); max-width: 800px; background: rgba(0,0,0,0.1);">
+        Dear <span style="color:#fff0b5; font-weight:bold; font-size:1.3rem;">Sharvari ✨</span><br><br>
         Today is your beautiful and special day 🌸<br>
-        May your life always shine with endless happiness,
+        May your life always shine with endless happiness,<br>
         pure love, great success, and unforgettable memories 💕<br><br>
-
-        May every moment bring you new reasons to smile,
+        May every moment bring you new reasons to smile,<br>
         laugh louder, dream bigger, and enjoy life to the fullest 🌷<br><br>
-
-        Your smile has a magical way of making everything
+        Your smile has a magical way of making everything<br>
         brighter and more beautiful 💖<br><br>
-
-        Stay happy, stay blessed, and keep spreading
+        Stay happy, stay blessed, and keep spreading<br>
         your positivity everywhere you go ✨<br><br>
-
-        <span style="
-            font-size:26px;
-            color:#ff1493;
-            font-weight:bold;
-        ">
-            Wishing You The Happiest Birthday Ever 🎂💫
+        <span style="font-size:1.6rem; color:#ffdb8e; font-weight:bold;">
+            ✨ Wishing You The Happiest Birthday Ever 🎂💫 ✨
         </span>
-
     </p>
+    <button class="btn" id="openGiftBtn">🎁 Open Your Gift 🎁</button>
+</section>
 
-
-
-        <button class="btn" onclick="openGift()">
-            Open Your Gift 🎁
-        </button>
-
-    </section>
-
-    <!-- SECTION 2 : CHILDHOOD MEMORIES -->
-
-    <section id="gift">
-
-        <h1 class="memory-title">
-            🧸 Cute Childhood Memories 💕
-        </h1>
-
-        <p>
-            Every picture of yours is adorable ✨<br>
-            Especially your childhood photos 🥺💖
-        </p>
-
-        <div class="photo-gallery">
-
-            <!-- PHOTO 1 -->
-
-            <div class="photo-card">
-
-                <img src="SHARU1.jpeg" alt="Photo 1">
-
-                <div class="photo-text">
-                    Little Princess 👑
-                </div>
-
-            </div>
-
-            <!-- PHOTO 2 -->
-
-            <div class="photo-card">
-
-                <img src="SHARU2.jpeg" alt="Photo 2">
-
-                <div class="photo-text">
-                    Cute Smile 🌸
-                </div>
-
-            </div>
-
-            <!-- PHOTO 3 -->
-
-            <div class="photo-card">
-
-                <img src="SHARU3.jpeg" alt="Photo 3">
-
-                <div class="photo-text">
-                    Beautiful Memories 💖
-                </div>
-
-            </div>
-
+<!-- SECTION 2 : CHILDHOOD MEMORIES GALLERY (GIFT SECTION) -->
+<section id="giftSection">
+    <h1 class="memory-title">🧸 Cute Childhood Memories 💕</h1>
+    <p style="font-size: 1.2rem; max-width: 650px;">
+        Every picture of yours is adorable ✨<br>
+        Especially your childhood photos 🥺💖
+    </p>
+    <div class="photo-gallery">
+        <!-- PHOTO 1 -->
+        <div class="photo-card">
+            <img src="SHARU1.jpeg" alt="Little Princess Sharvari" onerror="this.onerror=null; this.src='https://placehold.co/400x500/ffb7c5/ffffff?text=🌸+Love+🌸';">
+            <div class="photo-text">Little Princess 👑</div>
         </div>
-
-        <div class="cute-line">
-            These memories are truly precious ✨
+        <!-- PHOTO 2 -->
+        <div class="photo-card">
+            <img src="SHARU2.jpeg" alt="Cute Smile" onerror="this.onerror=null; this.src='https://placehold.co/400x500/f9c6d0/ffffff?text=✨+Cuteness+✨';">
+            <div class="photo-text">Cute Smile 🌸</div>
         </div>
-
-        <button class="btn" onclick="proposalSection()">
-            One Last Surprise 💌
-        </button>
-
-    </section>
-
-    <!-- SECTION 3 -->
-
-    <section id="proposal">
-
-        <h1>💖 I Love You 💖</h1>
-
-        <p>
-
-            Sharvari... 🥺💕<br><br>
-
-            You are the most special person in my life ✨<br>
-            Every moment with you feels magical 🌸<br><br>
-
-            Will You Be Mine Forever? 💍💖
-
-        </p>
-
-        <div class="buttons">
-
-            <button class="yes-btn" onclick="yesMessage()">
-                Yes 💖
-            </button>
-
-            <button class="no-btn" id="noBtn">
-                No 😅
-            </button>
-
+        <!-- PHOTO 3 -->
+        <div class="photo-card">
+            <img src="SHARU3.jpeg" alt="Beautiful Memories" onerror="this.onerror=null; this.src='https://placehold.co/400x500/e9a6c0/ffffff?text=💖+Memories+💖';">
+            <div class="photo-text">Beautiful Memories 💖</div>
         </div>
+    </div>
+    <div class="cute-line">
+        🌟 These memories are truly precious ✨🌟
+    </div>
+    <button class="btn" id="lastSurpriseBtn">💌 One Last Surprise 💌</button>
+</section>
 
-    </section>
+<!-- SECTION 3 : PROPOSAL + I LOVE YOU (final section) -->
+<section id="proposalSection">
+    <h1>💖 I Love You 💖</h1>
+    <p>
+        Sharvari... 🥺💕<br><br>
+        You are the most special person in my life ✨<br>
+        Every moment with you feels magical 🌸<br><br>
+        Will You Be Mine Forever? 💍💖
+    </p>
+    <div class="proposal-buttons" id="buttonArea">
+        <button class="yes-btn" id="yesBtn">💖 Yes 💖</button>
+        <button class="no-btn" id="noBtn">😅 No 😅</button>
+    </div>
+    <div class="final-love-note" id="hiddenMessage" style="display: none;">
+        💞 Forever starts today... you & me against the world 💞
+    </div>
+</section>
 
-    <script>
-
-        function openGift(){
-
-            document.getElementById("gift").scrollIntoView({
-                behavior:"smooth"
-            });
-
+<script>
+    // ------------------- FLOATING HEARTS GENERATOR -------------------
+    function createFloatingHearts() {
+        const heartContainer = document.getElementById('heartContainer');
+        const heartSymbols = ['💖', '💕', '💗', '💝', '💞', '🌸', '✨', '💘', '💓', '🎀'];
+        for (let i = 0; i < 14; i++) {
+            const span = document.createElement('span');
+            const randomHeart = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+            span.innerText = randomHeart;
+            const leftPos = Math.random() * 95; // 0% to 95%
+            const duration = 7 + Math.random() * 11; // 7s to 18s
+            const delay = Math.random() * 8;
+            span.style.left = leftPos + '%';
+            span.style.animationDuration = duration + 's';
+            span.style.animationDelay = delay + 's';
+            span.style.fontSize = (20 + Math.random() * 28) + 'px';
+            span.style.opacity = 0.5 + Math.random() * 0.5;
+            heartContainer.appendChild(span);
         }
+        // also keep adding occasional new hearts for extra love
+        setInterval(() => {
+            const newSpan = document.createElement('span');
+            const heartList = ['💖', '💗', '💕', '💞', '💝'];
+            newSpan.innerText = heartList[Math.floor(Math.random() * heartList.length)];
+            newSpan.style.left = Math.random() * 90 + '%';
+            newSpan.style.animationDuration = 8 + Math.random() * 7 + 's';
+            newSpan.style.fontSize = (18 + Math.random() * 30) + 'px';
+            newSpan.style.opacity = 0.6;
+            heartContainer.appendChild(newSpan);
+            setTimeout(() => { if(newSpan && newSpan.remove) newSpan.remove(); }, 13000);
+        }, 4000);
+    }
+    createFloatingHearts();
 
-        function proposalSection(){
-
-            document.getElementById("proposal").scrollIntoView({
-                behavior:"smooth"
-            });
-
+    // -------- NAVIGATION LOGIC: Open your gift -> scroll to gift section (childhood memories) --------
+    const openGiftButton = document.getElementById('openGiftBtn');
+    const giftSection = document.getElementById('giftSection');
+    
+    function openGiftNavigate() {
+        if(giftSection) {
+            giftSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else {
+            console.warn("gift section missing");
         }
+    }
+    if(openGiftButton) {
+        openGiftButton.addEventListener('click', openGiftNavigate);
+    }
 
-        function yesMessage(){
-
-            alert("💖 Yayyyyy!! You made me the happiest person ever ✨💕");
-
+    // -------- from gift section "One Last Surprise" -> Navigate to last section (proposal) --------
+    const lastSurpriseBtn = document.getElementById('lastSurpriseBtn');
+    const finalProposalSection = document.getElementById('proposalSection');
+    
+    function goToProposal() {
+        if(finalProposalSection) {
+            finalProposalSection.scrollIntoView({ behavior: "smooth", block: "center" });
+            // tiny additional spark: add a soft flash effect on the proposal title
+            const proposalTitle = finalProposalSection.querySelector('h1');
+            if(proposalTitle) {
+                proposalTitle.style.transform = 'scale(1.02)';
+                setTimeout(() => { proposalTitle.style.transform = ''; }, 300);
+            }
         }
+    }
+    if(lastSurpriseBtn) {
+        lastSurpriseBtn.addEventListener('click', goToProposal);
+    }
 
-        // MOVING NO BUTTON
+    // ---------- YES BUTTON : beautiful loving alert and show hidden message with confetti effect ----------
+    const yesButton = document.getElementById('yesBtn');
+    const hiddenMsgDiv = document.getElementById('hiddenMessage');
+    
+    function showFireworkEffect() {
+        // create small falling petals effect (vanilla)
+        for(let i=0;i<40;i++) {
+            const petal = document.createElement('div');
+            petal.innerText = ['💖','🌸','✨','💞','💗'][Math.floor(Math.random()*5)];
+            petal.style.position = 'fixed';
+            petal.style.left = Math.random() * 100 + '%';
+            petal.style.top = '0px';
+            petal.style.fontSize = (18 + Math.random()*24) + 'px';
+            petal.style.opacity = '0.9';
+            petal.style.pointerEvents = 'none';
+            petal.style.zIndex = '9999';
+            petal.style.transition = 'all 1.8s ease-out';
+            document.body.appendChild(petal);
+            const endTop = window.innerHeight - 50;
+            const rotate = (Math.random() - 0.5) * 200;
+            setTimeout(() => {
+                petal.style.transform = `translateX(${Math.random() * 80 - 40}px) rotate(${rotate}deg)`;
+                petal.style.top = endTop + 'px';
+                petal.style.opacity = '0';
+            }, 50);
+            setTimeout(() => petal.remove(), 1900);
+        }
+    }
 
-        const noBtn = document.getElementById("noBtn");
+    function yesMessage() {
+        // alert with sweet message
+      //  alert("💖 Yayyyyy!! You made me the happiest person ever ✨💕\nI'll cherish you forever, my love!");
+        // show hidden romantic message with beautiful animation
+        if(hiddenMsgDiv) {
+            hiddenMsgDiv.style.display = 'block';
+            hiddenMsgDiv.style.animation = 'fadeSlide 0.6s ease';
+            hiddenMsgDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        showFireworkEffect();
+        // also disable no button after yes? not necessary, just add sweet toast for extra love
+        const toastMsg = document.createElement('div');
+        toastMsg.className = 'surprise-toast';
+        toastMsg.innerText = '💘 You said YES! Endless love begins now 💘';
+        document.body.appendChild(toastMsg);
+        setTimeout(() => { toastMsg.style.opacity = '0'; setTimeout(()=>toastMsg.remove(),800); }, 2700);
+        // make yes button glow extra permanently (just fun)
+        if(yesButton) yesButton.style.transform = 'scale(1.05)';
+    }
+    if(yesButton) {
+        yesButton.addEventListener('click', yesMessage);
+    }
 
-        noBtn.addEventListener("mouseover", () => {
-
-            const x = Math.floor(Math.random() * 700);
-            const y = Math.floor(Math.random() * 180);
-
-            noBtn.style.left = x + "px";
-            noBtn.style.top = y + "px";
-
+    // ---------- MOVING "NO" BUTTON (Smart Escape) ----------
+    const noButton = document.getElementById('noBtn');
+    const buttonArea = document.getElementById('buttonArea');
+    
+    // function to get relative movement inside container but safe across all screen sizes
+    function moveNoButtonRandomly() {
+        if(!noButton) return;
+        const containerRect = buttonArea.getBoundingClientRect();
+        const btnRect = noButton.getBoundingClientRect();
+        // container relative position (max left/top within container)
+        let maxLeft = containerRect.width - btnRect.width - 10;
+        let maxTop = containerRect.height - btnRect.height - 10;
+        if(maxLeft < 50) maxLeft = 80;
+        if(maxTop < 30) maxTop = 60;
+        const randomX = Math.max(10, Math.floor(Math.random() * maxLeft));
+        const randomY = Math.max(10, Math.floor(Math.random() * maxTop));
+        // but no button is currently static in flex? We'll set position relative/absolute? Actually we need change inside flex container
+        // we set noBtn position to absolute relative to buttonArea, and buttonArea relative.
+        if(window.getComputedStyle(buttonArea).position !== 'relative') {
+            buttonArea.style.position = 'relative';
+        }
+        if(window.getComputedStyle(noButton).position !== 'absolute') {
+            noButton.style.position = 'absolute';
+            noButton.style.margin = '0';
+            // also store original sibling yesBtn might stay static
+            const yesBtnEl = document.getElementById('yesBtn');
+            if(yesBtnEl && window.getComputedStyle(yesBtnEl).position !== 'relative') {
+                yesBtnEl.style.position = 'relative';
+            }
+        }
+        // ensure no button is within visible bounds
+        noButton.style.left = randomX + 'px';
+        noButton.style.top = randomY + 'px';
+        noButton.style.right = 'auto';
+        noButton.style.bottom = 'auto';
+    }
+    
+    // Attach hover event + also click prevent catch but we also add funny message if somehow clicked (rare)
+    if(noButton) {
+        // initial setup to absolute inside container
+        const initNoBtnMovement = () => {
+            if(buttonArea) {
+                const style = window.getComputedStyle(buttonArea);
+                if(style.position !== 'relative') buttonArea.style.position = 'relative';
+            }
+            if(noButton) {
+                noButton.style.position = 'absolute';
+                noButton.style.left = 'auto';
+                noButton.style.right = '20px';
+                noButton.style.top = '20px';
+                const yesEl = document.getElementById('yesBtn');
+                if(yesEl && yesEl.style.position !== 'relative') yesEl.style.position = 'relative';
+                // initial random shift for cuteness
+                setTimeout(() => moveNoButtonRandomly(), 100);
+            }
+        };
+        initNoBtnMovement();
+        
+        // on mouseover moves away
+        noButton.addEventListener('mouseover', function(e) {
+            moveNoButtonRandomly();
+            // add little vibration effect to no button
+            noButton.style.transform = 'scale(0.98)';
+            setTimeout(() => { if(noButton) noButton.style.transform = ''; }, 150);
         });
+        
+        // also if the button is clicked (very tricky if clicked but we redirect with sweet apology)
+        noButton.addEventListener('click', function() {
+            // funny apology but still hearts
+            const sweetApology = document.createElement('div');
+            sweetApology.className = 'surprise-toast';
+            sweetApology.innerText = '💕 Haha! The "No" button is shy... just say Yes 💕';
+            document.body.appendChild(sweetApology);
+            setTimeout(() => { sweetApology.remove(); }, 2000);
+            moveNoButtonRandomly();
+            // also create fluttering hearts
+            for(let i=0;i<10;i++) {
+                const flyHeart = document.createElement('span');
+                flyHeart.innerText = '💗';
+                flyHeart.style.position = 'fixed';
+                flyHeart.style.left = (Math.random() * 90) + '%';
+                flyHeart.style.bottom = '10px';
+                flyHeart.style.fontSize = '24px';
+                flyHeart.style.opacity = '0.8';
+                flyHeart.style.pointerEvents = 'none';
+                flyHeart.style.zIndex = '999';
+                flyHeart.style.transition = 'all 1s ease-out';
+                document.body.appendChild(flyHeart);
+                setTimeout(() => {
+                    flyHeart.style.transform = 'translateY(-200px) rotate(20deg)';
+                    flyHeart.style.opacity = '0';
+                }, 50);
+                setTimeout(() => flyHeart.remove(), 1100);
+            }
+        });
+        
+        // Also ensure window resize: reposition relative to container so it doesn't go out of bounds
+        window.addEventListener('resize', function() {
+            if(noButton && buttonArea) {
+                const containerRect = buttonArea.getBoundingClientRect();
+                const btnRect = noButton.getBoundingClientRect();
+                const currentLeft = parseFloat(noButton.style.left);
+                const currentTop = parseFloat(noButton.style.top);
+                let maxLeftVal = containerRect.width - btnRect.width - 15;
+                let maxTopVal = containerRect.height - btnRect.height - 15;
+                if(maxLeftVal < 30) maxLeftVal = 40;
+                if(maxTopVal < 30) maxTopVal = 40;
+                let newLeft = currentLeft;
+                let newTop = currentTop;
+                if(currentLeft > maxLeftVal) newLeft = maxLeftVal - 10;
+                if(currentTop > maxTopVal) newTop = maxTopVal - 10;
+                if(newLeft < 8) newLeft = 8;
+                if(newTop < 8) newTop = 8;
+                noButton.style.left = Math.max(5, Math.min(newLeft, maxLeftVal)) + 'px';
+                noButton.style.top = Math.max(5, Math.min(newTop, maxTopVal)) + 'px';
+            }
+        });
+    }
 
-    </script>
-
+    // optional: if someone tries to open dev tools or just additional love: preload background music simulation not needed
+    // but make sure the navigation sequence: "Open your gift" goes to gift section, then "One Last Surprise" goes to last section
+    // already both functions bound exactly.
+    // Also if the gift section missing image placeholders are already covered by onerror.
+    
+    // add extra smooth heartbeat when page loads
+    document.body.style.animation = 'fadeInPage 0.7s';
+    const styleSheet = document.createElement("style");
+    styleSheet.textContent = `@keyframes fadeInPage { from { opacity: 0; } to { opacity: 1; } } body { animation: fadeInPage 0.7s ease; }`;
+    document.head.appendChild(styleSheet);
+    
+    // ensure that from the first button, we navigate to childhood gallery section and then second button goes to proposal. sequence done.
+</script>
 </body>
 </html>
